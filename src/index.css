@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CleanMind Theme Variables */
+:root {
+  --radius: 1rem;
+  
+  /* Light Theme */
+  --background: 248 249 251; /* #F8F9FB */
+  --foreground: 11 18 33; /* #0B1221 */
+  --card: 255 255 255; /* #FFFFFF */
+  --card-foreground: 11 18 33; /* #0B1221 */
+  --popover: 255 255 255; /* #FFFFFF */
+  --popover-foreground: 11 18 33; /* #0B1221 */
+  --primary: 23 70 193; /* #1746C1 */
+  --primary-foreground: 255 255 255; /* #FFFFFF */
+  --secondary: 248 249 251; /* #F8F9FB */
+  --secondary-foreground: 11 18 33; /* #0B1221 */
+  --muted: 148 163 184; /* #94A3B8 */
+  --muted-foreground: 11 18 33; /* #0B1221 */
+  --accent: 247 156 46; /* #F79C2E */
+  --accent-foreground: 255 255 255; /* #FFFFFF */
+  --destructive: 239 68 68; /* #EF4444 */
+  --destructive-foreground: 255 255 255; /* #FFFFFF */
+  --border: 148 163 184; /* #94A3B8 */
+  --input: 255 255 255; /* #FFFFFF */
+  --ring: 23 70 193; /* #1746C1 */
+  --chart-1: 23 70 193; /* #1746C1 */
+  --chart-2: 247 156 46; /* #F79C2E */
+  --chart-3: 106 170 179; /* #6AAAB3 */
+  --chart-4: 248 208 143; /* #F8D08F */
+  --chart-5: 44 91 234; /* #2C5BEA */
+}
+
+.dark {
+  /* Dark Theme */
+  --background: 15 19 26; /* #0F131A */
+  --foreground: 230 236 242; /* #E6ECF2 */
+  --card: 21 27 36; /* #151B24 */
+  --card-foreground: 230 236 242; /* #E6ECF2 */
+  --popover: 21 27 36; /* #151B24 */
+  --popover-foreground: 230 236 242; /* #E6ECF2 */
+  --primary: 126 161 255; /* #7EA1FF */
+  --primary-foreground: 15 19 26; /* #0F131A */
+  --secondary: 21 27 36; /* #151B24 */
+  --secondary-foreground: 230 236 242; /* #E6ECF2 */
+  --muted: 112 129 153; /* #708199 */
+  --muted-foreground: 230 236 242; /* #E6ECF2 */
+  --accent: 255 195 110; /* #FFC36E */
+  --accent-foreground: 15 19 26; /* #0F131A */
+  --destructive: 239 68 68; /* #EF4444 */
+  --destructive-foreground: 255 255 255; /* #FFFFFF */
+  --border: 112 129 153; /* #708199 */
+  --input: 21 27 36; /* #151B24 */
+  --ring: 126 161 255; /* #7EA1FF */
+  --chart-1: 126 161 255; /* #7EA1FF */
+  --chart-2: 255 195 110; /* #FFC36E */
+  --chart-3: 124 201 209; /* #7CC9D1 */
+  --chart-4: 247 156 46; /* #F79C2E */
+  --chart-5: 126 161 255; /* #7EA1FF */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-title font-roboto;
+  }
+  
+  p, span, div {
+    @apply font-text;
+  }
+}
+
+@layer components {
+  /* CleanMind specific component styles */
+  .cleanmind-card {
+    @apply bg-card text-card-foreground rounded-cleanmind border border-border shadow-sm;
+  }
+  
+  .cleanmind-button {
+    @apply bg-primary text-primary-foreground rounded-cleanmind px-4 py-2 font-text-medium transition-colors hover:bg-primary/90;
+  }
+  
+  .cleanmind-input {
+    @apply bg-input border border-border rounded-cleanmind px-3 py-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+  
+  .priority-high {
+    @apply bg-destructive text-destructive-foreground;
+  }
+  
+  .priority-medium {
+    @apply bg-accent text-accent-foreground;
+  }
+  
+  .priority-low {
+    @apply bg-muted text-muted-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
