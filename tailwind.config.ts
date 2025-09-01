@@ -15,26 +15,28 @@ const config: Config = {
       colors: {
         // Light theme colors
         light: {
-          background: '#F8F9FB',
-          surface: '#FFFFFF',
-          primary: '#1746C1',
-          'primary-emphasis': '#2C5BEA',
-          'accent-1': '#F79C2E',
-          'accent-2': '#F8D08F',
-          'info-teal': '#6AAAB3',
-          text: '#0B1221',
-          muted: '#94A3B8',
+          background: '#F8F9FB',       // gris muy suave
+          surface: '#FFFFFF',          // blanco puro para tarjetas
+          primary: '#1746C1',          // azul profundo
+          'primary-emphasis': '#2C5BEA', // azul más vivo
+          'accent-1': '#F79C2E',       // naranja vibrante
+          'accent-2': '#F8D08F',       // dorado suave
+          'info-teal': '#6AAAB3',      // teal elegante
+          text: '#0B1221',             // casi negro para máxima legibilidad
+          muted: '#94A3B8',            // gris neutro para secundarios
         },
+
         // Dark theme colors
         dark: {
-          background: '#0F131A',
-          surface: '#151B24',
-          primary: '#7EA1FF',
-          'accent-1': '#FFC36E',
-          'accent-2': '#F79C2E',
-          'info-teal': '#7CC9D1',
-          text: '#E6ECF2',
-          muted: '#708199',
+          background: '#0F131A',       // gris oscuro azulado
+          surface: '#151B24',          // superficie un poco más clara
+          primary: '#7EA1FF',          // azul claro que resalta en fondo oscuro
+          'primary-emphasis': '#5A82F0', // azul intermedio para hover/activo
+          'accent-1': '#FFC36E',       // dorado cálido
+          'accent-2': '#F79C2E',       // naranja vivo
+          'info-teal': '#7CC9D1',      // teal más luminoso
+          text: '#E6ECF2',             // gris muy claro (no blanco puro, más suave)
+          muted: '#708199',            // gris azulado apagado para texto secundario
         },
         // Default theme mapping (will be overridden by CSS variables)
         background: 'hsl(var(--background))',
